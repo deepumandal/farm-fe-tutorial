@@ -1,5 +1,6 @@
 import { useState } from "react";
-// import "./main.css";
+import "./main.css";
+import "@Main"
 import reactLogo from "./assets/react.svg";
 import FarmLogo from "./assets/logo.png";
 import { AnyType } from "@AppTypes/commonTypes";

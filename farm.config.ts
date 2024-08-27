@@ -1,18 +1,22 @@
 import { defineConfig } from "@farmfe/core";
+// import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path";
 
 export default defineConfig({
   plugins: ["@farmfe/plugin-react"],
+  // vitePlugins: [tsconfigPaths()],
   compilation: {
     resolve: {
       alias: {
-        "@Fonts/*": "./src/assets/fonts/*",
-        "@Main":"./src/main.css",
-        "@Styles/*": "./src/assets/styles/*",
-        "@Svg/*": "./src/assets/svg/*",
-        "@Components/*": "./src/components/*",
-        "@HOC/*": "./src/hoc/*",
-        "@Utils/*": "./src/utils/*",
-        "@AppTypes/*": "./src/@types/*",
+        "@AppTypes/": path.join(__dirname, "src/@types/"),
+        "@Main": path.join(__dirname, "src/main.css"),
+        // "@Fonts/*": "./src/assets/fonts/*",
+        // "@Styles/*": "./src/assets/styles/*",
+        // "@Svg/*": "./src/assets/svg/*",
+        // "@Components/*": "./src/components/*",
+        // "@HOC/*": "./src/hoc/*",
+        // "@Utils/*": "./src/utils/*",
+        // "@AppTypes/*": "./src/@types/*",
       },
     },
   },
